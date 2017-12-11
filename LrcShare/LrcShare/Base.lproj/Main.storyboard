@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KtL-wo-Mnu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--正在播放-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="boJ-yg-T4I"/>
+                        <viewControllerLayoutGuide type="bottom" id="mpc-PC-hQN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="正在播放" id="wiP-w5-sho">
+                        <barButtonItem key="rightBarButtonItem" title="生成图片" style="done" id="yB8-O4-1R9">
+                            <color key="tintColor" red="1" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="createButton" destination="yB8-O4-1R9" id="Yqg-Gp-MHo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="117.39130434782609"/>
+        </scene>
+        <!--ShareVC-->
+        <scene sceneID="DVj-ur-w17">
+            <objects>
+                <viewController storyboardIdentifier="LrcShareVC" id="Oq9-za-krv" customClass="MCShareVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sQS-jN-zGn"/>
+                        <viewControllerLayoutGuide type="bottom" id="8lg-Jy-nHo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mUu-u8-IzJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWN-zK-JA9">
+                                <rect key="frame" x="0.0" y="617" width="186.5" height="50"/>
+                                <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="iB8-sg-75A"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="分享">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEl-qc-AFL">
+                                <rect key="frame" x="188" y="617" width="186.5" height="50"/>
+                                <color key="backgroundColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NAZ-ZO-jRI"/>
+                                    <constraint firstAttribute="height" constant="50" id="PGy-bV-8eN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="保存">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJZ-yR-4ch">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jJZ-yR-4ch" firstAttribute="leading" secondItem="mUu-u8-IzJ" secondAttribute="leading" id="30A-Oy-abj"/>
+                            <constraint firstAttribute="trailing" secondItem="JEl-qc-AFL" secondAttribute="trailing" id="Ohi-P5-SmM"/>
+                            <constraint firstItem="JEl-qc-AFL" firstAttribute="width" secondItem="mUu-u8-IzJ" secondAttribute="width" multiplier="0.5" constant="-1" id="Q5c-qg-zbi"/>
+                            <constraint firstItem="jJZ-yR-4ch" firstAttribute="top" secondItem="sQS-jN-zGn" secondAttribute="bottom" id="TbL-4G-X5s"/>
+                            <constraint firstItem="dWN-zK-JA9" firstAttribute="width" secondItem="mUu-u8-IzJ" secondAttribute="width" multiplier="0.5" constant="-1" id="UJd-o7-5Ny"/>
+                            <constraint firstItem="dWN-zK-JA9" firstAttribute="leading" secondItem="mUu-u8-IzJ" secondAttribute="leading" id="WX7-gU-JtO"/>
+                            <constraint firstAttribute="trailing" secondItem="jJZ-yR-4ch" secondAttribute="trailing" id="YAX-hr-LGY"/>
+                            <constraint firstItem="dWN-zK-JA9" firstAttribute="top" secondItem="jJZ-yR-4ch" secondAttribute="bottom" id="f1j-wo-wSr"/>
+                            <constraint firstItem="8lg-Jy-nHo" firstAttribute="top" secondItem="JEl-qc-AFL" secondAttribute="bottom" id="foV-zF-lhN"/>
+                            <constraint firstItem="8lg-Jy-nHo" firstAttribute="top" secondItem="dWN-zK-JA9" secondAttribute="bottom" id="rQ1-9V-78a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="JEl-qc-AFL" id="Dij-IS-pz5"/>
+                        <outlet property="scrollView" destination="jJZ-yR-4ch" id="2Ut-cf-e1a"/>
+                        <outlet property="shareButton" destination="dWN-zK-JA9" id="bbd-QO-dXG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7is-Sj-afl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1192.8" y="116.49175412293854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1jY-lR-YLN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KtL-wo-Mnu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kmo-09-MfJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QLJ-sG-pCG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GD-Bz-cv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-279" y="117"/>
+        </scene>
+    </scenes>
+</document>
